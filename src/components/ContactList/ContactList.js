@@ -25,11 +25,11 @@ export const ContactList = () => {
 
   return (
     <ul className={css.listContainer}>
-      {contactsData.map(({ name, number, id }, index) => (
+      {contactsData.map(({ name, phone, id, country }, index) => (
         <li key={nanoid()} className={css.listItem}>
           <span className={css.contactName}> {name} :</span>
-          <span className={css.contactNumber}>{number} </span>
-
+          <span className={css.contactNumber}>{phone} </span>
+          <span className={css.contactNumber}>{country} </span>
           <button
             type="button"
             onClick={() => onDelete(id)}
